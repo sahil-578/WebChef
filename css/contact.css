@@ -1,0 +1,326 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "poppins", sans-serif;
+}
+
+:root {
+  /* --bg1: #edf2fc; */
+  --primaryColor: #edf2fc;
+  --secondaryColor: #000;
+  --text-color: #979797;
+  /* --color: #000; */
+  --tcolor: rgb(119 119 119);
+
+  --boxShadow: 7px 7px 15px #45566754, -8px -8px 15px rgb(81 101 121 / 4%),
+    inset -5px -4px 13px 0px rgb(81 101 121 / 35%),
+    inset 6px 7px 12px 0px rgb(255 255 255 / 94%);
+
+  --boxShadow2: inset 4px 4px 8px rgb(189 200 213),
+    inset -4px -4px 8px rgb(255 255 255);
+
+  --boxShadow3: 4px 4px 8px rgb(189 200 213), -4px -4px 8px rgb(255 255 255);
+
+  --sbShadow: 5px 5px 7px rgb(0 0 0 / 25%),
+    inset 2px 2px 5px rgb(255 255 255 / 25%),
+    inset -3px -3px 5px rgb(0 0 0 / 12%);
+}
+
+body.dark {
+  /* --bg1: #2f363e; */
+
+  --primaryColor: #2f363e;
+
+  --secondaryColor: #ffffff;
+
+  --text-color: rgb(255, 208, 0);
+  /* --color: #fff; */
+
+  --tcolor: rgb(243, 243, 243);
+
+  --boxShadow: 5px 5px 15px rgba(0, 0, 0, 0.25),
+    5px 15px 15px rgba(0, 0, 0, 0.25), inset 5px 5px 10px rgba(0, 0, 0, 0.5),
+    inset 5px 5px 20px rgba(255, 255, 255, 0.2),
+    inset -5px -5px 15px rgba(0, 0, 0, 0.75);
+
+  --boxShadow2: inset -3px -3px 6px rgb(73, 78, 83),
+    inset 3px 3px 6px rgb(32, 28, 28);
+
+  --boxShadow3: -3px -3px 6px rgb(73, 78, 83), 3px 3px 6px rgb(32, 28, 28);
+
+  --sbShadow: 5px 5px 7px rgb(0 0 0 / 25%),
+    inset 2px 2px 5px rgb(255 255 255 / 25%),
+    inset -3px -3px 5px rgb(0 0 0 / 50%);
+
+  --scishadow: linear-gradient(to bottom, #2f363e, rgb(73, 78, 83));
+
+  --scitextshadow: -2px -2px 3px #a1a1a160, 2px 2px 3px #22272c;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+/* body {
+  display: grid;
+  text-align: center;
+  place-items: center;
+  background: var(--primaryColor);
+} */
+
+.hero {
+  width: 100%;
+  height: 100vh;
+  background: var(--primaryColor);
+  position: relative;
+}
+
+.main-body {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-image: url(./images/vegBG.png); */
+  background-size: 100%;
+  background-repeat: no-repeat;
+  /* background-position: bottom; */
+}
+
+nav {
+  width: 92%;
+  margin: auto;
+  display: flex;
+  padding: 20px 0;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  width: 130px;
+  cursor: pointer;
+}
+
+nav ul {
+  text-align: right;
+  flex: 1;
+}
+
+nav ul li {
+  list-style: none;
+  display: inline-block;
+  margin: 10px 20px;
+  font-weight: bold;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: var(--secondaryColor);
+}
+
+nav ul li a.active {
+  color: #f44336;
+}
+
+nav ul li a:hover {
+  color: #f44336;
+  transition: 0.5s ease;
+}
+
+.contact-heading {
+  margin-left: 4.75%;
+  margin-top: 2%;
+}
+
+.contact-heading h2 {
+  font-size: 60px;
+  margin-bottom: 25px;
+  color: var(--secondaryColor);
+}
+
+.contact-imgbox {
+  width: 45%;
+  height: 80%;
+  position: absolute;
+  bottom: 10px;
+  left: 100px;
+}
+
+.contact-imgbox img {
+  height: 70%;
+  position: absolute;
+  right: 20%;
+  transform: translateX(30%);
+  bottom: 10px;
+}
+
+span {
+  color: #f44336;
+}
+
+.content {
+  /* margin-top: 45px; */
+  margin-top: -125px;
+  padding: 60px 45px;
+  border-radius: 32px;
+  width: 385px;
+  height: 540px;
+  margin-left: 1000px;
+  box-shadow: var(--boxShadow);
+  background: var(--primaryColor);
+}
+
+.content .text {
+  font-size: 33px;
+  font-weight: 600;
+  margin-bottom: 35px;
+  color: var(--secondaryColor);
+  text-align: center;
+  margin-top: -25px;
+}
+
+.content .field {
+  height: 50px;
+  width: 100%;
+  display: flex;
+  position: relative;
+}
+
+.field input {
+  height: 100%;
+  width: 100%;
+  border: none;
+  outline: none !important;
+  font-size: 18px;
+  padding-left: 50px;
+  border-radius: 25px;
+  background: var(--primaryColor);
+  box-shadow: var(--boxShadow2);
+}
+
+input:focus {
+  box-shadow: var(--boxShadow3);
+}
+
+::placeholder {
+  color: var(--tcolor);
+}
+
+.field:nth-child(2) {
+  margin-top: 20px;
+}
+
+.field:nth-child(3) {
+  margin-top: 20px;
+}
+
+.field span {
+  position: absolute;
+  color: var(--tcolor);
+  line-height: 50px;
+  width: 50px;
+  margin-left: 20px;
+}
+
+button {
+  margin: 25px 0;
+  width: 80%;
+  color: var(--secondaryColor);
+  height: 45px;
+  font-size: 18px;
+  font-weight: 600;
+  background: var(--primaryColor);
+  cursor: pointer;
+  outline: none;
+  border: none;
+  box-shadow: var(--boxShadow3);
+  border-radius: 25px;
+  margin-left: 25px;
+}
+
+button:focus {
+  box-shadow: var(--boxShadow2);
+  color: #f44336;
+}
+
+h4 {
+  font-size: 14px;
+  margin: 0 0 16px 0;
+  /* color: rab(119 119 119); */
+  color: var(--secondaryColor);
+  text-align: center;
+  justify-content: center;
+}
+
+.social-icon {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.social-icon i {
+  line-height: 50px;
+  width: 50px;
+  height: 50px;
+  color: #fff;
+  border-radius: 50%;
+  font-size: 28px;
+  box-shadow: var(--sbShadow);
+  justify-content: center;
+  /* place-items: center; */
+  text-align: center;
+}
+
+.social-icon i:nth-child(1) {
+  background: linear-gradient(90deg, #181717, #333);
+}
+
+.social-icon i:nth-child(2) {
+  background: linear-gradient(90deg, #0077b5, #00a0dc);
+}
+
+.social-icon i:nth-child(3) {
+  background: linear-gradient(90deg, #405de6, #fd1d1d);
+}
+
+.social-icon i:nth-child(4) {
+  background: linear-gradient(315deg, #0078ff -7.64%, #00c6ff 104.5%);
+}
+
+.drak-light {
+  display: flex;
+  right: 50px;
+  position: absolute;
+  justify-content: center;
+  top: 80px;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  box-shadow: var(--boxShadow3);
+  border-radius: 50%;
+}
+
+.drak-light i {
+  position: absolute;
+  font-size: 25px;
+  cursor: pointer;
+  color: var(--tcolor);
+  transition: all 0.3s ease;
+}
+
+.drak-light i.fa-sun {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.drak-light.active i.fa-sun {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.drak-light.active i.fa-moon {
+  opacity: 0;
+  pointer-events: none;
+}
